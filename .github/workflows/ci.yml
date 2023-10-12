@@ -30,3 +30,4 @@ jobs:
             remote_path: ${{ secrets.FTP_PATH }}
             local_path: './src/*'
             sftp_only: true
+            delete_remote_files: true
