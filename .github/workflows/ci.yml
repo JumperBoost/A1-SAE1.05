@@ -16,17 +16,16 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      # Sync files to website via SFTP
+      # Transfer files
       - name: Deploy
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        uses: appleboy/scp-action@v0.1.4
         with:
-            server: ${{ secrets.FTP_HOST }}
-            port: ${{ secrets.FTP_PORT }}
-            username: ${{ secrets.FTP_USER }}
-            password: ${{ secrets.FTP_PASSWORD }}
-            remote_path: ${{ secrets.FTP_PATH }}
-            local_path: './src/*'
-            sftp_only: true
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "src/*"
+          target: ${{ secrets.PATH }}
+          rm: true
