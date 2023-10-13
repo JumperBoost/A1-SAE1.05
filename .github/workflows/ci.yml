@@ -29,4 +29,3 @@ jobs:
             password: ${{ secrets.FTP_PASSWORD }}
             remote_path: ${{ secrets.FTP_PATH }}
             local_path: './src/*'
-            delete_remote_files: true
