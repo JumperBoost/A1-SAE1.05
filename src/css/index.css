@@ -99,13 +99,12 @@ body > main {
     text-decoration: solid;
     color: white;
 }
-
 #articles > article {
     display:flex;
     width:85%;
     border-radius: 10px;
     background-color: lightgrey;
-    margin: 20px auto;
+    margin: 100px auto;
 }
 
 #articles > article > p {
