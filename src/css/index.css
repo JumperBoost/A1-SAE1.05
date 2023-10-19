@@ -1,19 +1,143 @@
+/* Polices écritures */
+@font-face {
+    font-family: progress;
+    src : url("../fonts/progress.ttf")
+}
+
+@font-face {
+    font-family: dreamer;
+    src : url("../fonts/thedreamer.otf")
+}
+
 body {
-	text-align: center;
+    margin: 0;
 }
 
-h1 {
-	color: red;
+header > nav {
+    position: fixed;
+    display: flex;
+    background-color: orange;
+    top: 10px;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    font-size: 25px;
+    padding: 10px;
 }
 
-p {
-	font-family: fantasy;
+header > nav > div {
+    padding: 0 10px;
+    border-left: 2px solid black;
 }
 
-#content {
-	border: 2px solid black;
-	border-radius: 20px;
-	width: 500px;
-	margin: auto;
-	background-color: yellow;
+header > nav > a {
+    padding: 0 10px;
+    border-left: 2px solid black;
+}
+
+.submenu {
+    display:none;
+    position:relative;
+    background-color:orange;
+    top: 10px;
+}
+
+header > nav > .subparent:hover > .submenu {
+    display:block;
+}
+
+header > nav > a {
+    text-decoration: none;
+    color: black;
+}
+
+header > nav > a:hover {
+    color: white;
+}
+
+body > main {
+    margin-top: 100%;
+}
+
+#main {
+    text-align: center;
+    border: 2px solid red;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/main_bg.jpg");
+    z-index: 100;
+}
+
+#main > div h1, #main > div h2 {
+    margin: 0;
+    font-family: progress, Arial, serif;
+}
+
+#main > a {
+    margin-top: 50px;
+    padding: 3px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: red;
+}
+
+#main > a:link {
+    text-decoration: solid;
+    color: white;
+}
+
+#main > a:visited {
+    text-decoration: solid;
+    color: white;
+}
+
+#articles > article {
+    display:flex;
+    width:85%;
+    border-radius: 10px;
+    background-color: lightgrey;
+    margin: 20px auto;
+}
+
+#articles > article > p {
+    margin: 20px 30px;
+    text-align: justify;
+    font-family: dreamer, serif;
+    font-size: 30px;
+}
+
+#articles > article > img {
+    width: 500px;
+    height: 400px;
+    border-radius: 0 10px 10px 0;
+}
+
+#map {
+    background-color: #562102;
+    color:white;
+}
+
+#map > iframe {
+    margin:10px 10px 10px auto;
+    width: 500px;
+    height: 400px;
+}
+
+footer {
+    background-color: #2c2f33;
+    display:flex;
+}
+
+footer > #topsecret-logo {
+    height:100px;
+    width:100px;
 }
