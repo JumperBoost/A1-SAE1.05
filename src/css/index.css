@@ -22,34 +22,64 @@ header > nav {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    font-size: 25px;
-    padding: 10px;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 20px;
+    opacity:75%;
+    text-align:center;
 }
 
 header > nav > div {
-    padding: 0 10px;
     border-left: 2px solid black;
 }
 
-header > nav > a {
-    padding: 0 10px;
+.subparent > a {
+        padding: 0 10px;
+}
+
+header > nav > a:not(:first-child) {
+    padding: 0 90px 5px 20px;
     border-left: 2px solid black;
+}
+header > nav > a {
+    padding: 0 20px 0 90px;
+    text-decoration: none;
+    color: black;
+}
+
+header > nav > div > a {
+    text-decoration: none;
+    color: black;
 }
 
 .submenu {
     display:none;
-    position:relative;
+    position:absolute;
     background-color:orange;
-    top: 10px;
+    top: 100%;
+    flex-direction:column;
+    text-align:center;
+    width: 20%;
+}
+
+#Actualité > div {
+    width: 19%;
+}
+
+#room > div {
+    width: 21%;
+}
+
+header > nav > .subparent > .submenu > a {
+    border-top: 2px solid black;
+    text-decoration: none;
+    color: black;
+    padding: 10px 0 10px 0;
 }
 
 header > nav > .subparent:hover > .submenu {
-    display:block;
-}
-
-header > nav > a {
-    text-decoration: none;
-    color: black;
+    display:flex;
+    flex-flow: column wrap;
 }
 
 header > nav > a:hover {
