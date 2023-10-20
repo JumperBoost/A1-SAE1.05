@@ -54,11 +54,15 @@ header > nav > a, header > nav > div > a, .submenu > a {
     text-align:center;
 }
 
+.subparent{
+    position: relative;
+}
+
 .submenu {
     display:none;
     position:absolute;
     background-color:#465455;
-    top: 90%;
+    top: 39px;
     flex-direction:column;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
