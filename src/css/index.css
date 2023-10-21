@@ -10,125 +10,105 @@
 }
 
 body {
-    margin: 0;
+    margin: 0px;
     background-color: #abb5bf;
 }
 /* début nav*/
+
+header {
+    margin: auto;
+    margin-left: 25%;
+}
+
 header > nav {
     position: fixed;
     display: flex;
+    margin: auto;
+    z-index: 1000;
     background-color:#465455;
     top: 10px;
-    cursor: pointer;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
     font-size: 2vw;
     padding: 5px;
     border-radius: 20px;
-    text-align:center;
+    width: 50%;
 }
 
-header > nav > a {
-    padding: 0 20px 0 90px;
+header > nav div {
+    margin: 0 auto;
     position: relative;
-}
-
-header > nav > div {
+    text-align: center;
+    padding: 0 10px 0 10px;
     cursor: pointer;
     color:#465455;
-    border-left: 2px solid black;
+    display: flex;
 }
 
-.subparent > a {
-    padding: 0 10px;
+header > nav > div > div {
+    padding: 0 10px 0 10px;
 }
-
-header > nav > a:not(:first-child) {
-    padding: 0 90px 5px 20px;
-    border-left: 2px solid black;
-}
-header > nav > a, header > nav > div > a, .submenu > a {
-    text-decoration: none;
-    color: black;
-    text-align:center;
-}
-
+/*réglage class*/
 .subparent{
     position: relative;
+    z-index: 100;
 }
 
 .submenu {
     display:none;
     position:absolute;
     background-color:#465455;
-    top: 39px;
+    top: 30px;
     flex-direction:column;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-}
-header > nav > a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s;
-}
-
-header > nav > a:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-header > nav > .subparent::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s;
-}
-header > nav > .subparent:hover:before{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-header > nav > .subparent{
-    position: relative;
-}
-
-#Actualité > div {
     width: 100%;
 }
-
-#room > div {
-    width: 100%;
+/*fin réglage class*/
+header > nav a {
+    text-decoration: none;
+    color: black;
+    text-align:center;
 }
 
-header > nav > .subparent > .submenu > a {
-    padding: 10px 0 10px 0;
+header > nav > div > .subparent, header > nav > div > div:not(:first-child) {
+    border-left: 2px solid black;
 }
 
-header > nav > .subparent > .submenu > a:not(:first-child){
-    border-top: 2px solid black;
+header > nav > div > .subparent > .submenu > div {
+    padding: 10px 0 0 0;
 }
 
-header > nav > .subparent:hover > .submenu {
+header > nav > div > .subparent:hover > .submenu {
     display:flex;
     flex-flow: column wrap;
 }
 
-header > nav > a:hover, header > nav > div > a:hover, .subparent > .submenu > a:hover {
+header > nav a:hover {
     color: white;
 }
+
+/*animation*/
+.subparent > a {
+     z-index: 100;
+}
+
+header > nav a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header > nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
 /* fin nav*/
 body > main {
     margin-top: 115vh;
