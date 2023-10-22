@@ -1,15 +1,106 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="fr">
 <head>
-	<title>Test Page</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Opération Classified: Le camp de Flossenburg</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-	<div id="content">
-		<h1>Hello, World!</h1>
-		<h3>This is a simple test page made only in HTML 5!</h3>
-		<p>Have a <u>good day</u>!</p>
-	</div>
+<header>
+    <nav>
+        <div>
+            <div><a href="#">Accueil</a></div>
+            <div class="subparent"><a href="#">Actualité</a>
+                <div class="submenu">
+                    <div><a href="#">Récentes</a></div>
+                    <div><a href="#">Toutes</a></div>
+                </div>
+            </div>
+            <div class="subparent"><a href="#">Les rooms</a>
+                <div class="submenu">
+                    <div><a href="#cellule">Cellule</a></div>
+                    <div><a href="#couloir">Couloir</a></div>
+                    <div><a href="#sallegardiens">Salle des Gardiens</a></div>
+                    <div><a href="#cafeteria">Cafeteria</a></div>
+                    <div><a href="#bureaudir">Bureau</a></div>
+                </div>
+            </div>
+            <div><a href="#footer">Contact</a></div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div id="main">
+        <div>
+            <h1>OPÉRATION CLASSIFIED:</h1>
+            <h2>LE CAMP DE FLOSSENBURG</h2>
+        </div>
+        <a href="#articles">Découvrir</a>
+    </div>
+    <div id="articles">
+        <article id="cellule">
+            <div>
+                <h2>La Cellule</h2>
+                <p>Vous voilà pris au piège, capturés par l'ennemi au sein de la prison du camp de Flossenburg !
+                    Il faut vous échapper de cette cellule au plus vite afin d'espérer sortir indemne du camp.
+                    A vous de trouver des solutions pour accéder au couloir depuis votre cellule totalement
+                    verouillée.</p>
+            </div>
+            <img src="./img/cellule2.jpg" alt="Cellule" class="droite">
+        </article>
+        <article id="couloir">
+            <img src="./img/couloir1.jpg" alt="Couloir" class="gauche">
+            <div>
+                <h2>Le couloir</h2>
+                <p>Dès votre arrivée dans le couloir , des soldats montent la garde et surveillent ce lieu avec minutie.
+                    Montrez vos talents de discrétion et d'agilité pour vous faufiler sans vous faire remarquer !
+                    Si un garde vous aperçoit, vous perdrez du temps. Ne perdez pas ce que vous avez de plus
+                    précieux.</p>
+            </div>
+        </article>
+        <article id="sallegardiens">
+            <div>
+                <h2>La salle des gardiens</h2>
+                <p>Vos qualités d'espion seront mises à rude épreuve durant cette étape. Le trousseau de clé pour
+                    accéder
+                    à la caféteria se situe dans la salle des gardiens. Vous avez 10 minutes pour les trouver, sinon les
+                    gardes seront avertis de votre présence. Le temps est compté!</p>
+            </div>
+            <img src="./img/sallegardiens1.jpg" alt="Salle des gardiens" class="droite">
+        </article>
+        <article id="cafeteria">
+            <img src="./img/cafet4.jpg" alt="Caféteria" class="gauche">
+            <div>
+                <h2>La caféteria</h2>
+                <p>C'est l'heure de jouer les cuisniers. La caféteria regorge d'ingrédients qui seront utiles quant à la
+                    conception du burger. Un burger ? Oui, le directeur de la prison en raffole ! Le distraire vous
+                    permettra d'accéder à son bureau en toute tranquilité. Attention, il mange vite...</p>
+            </div>
+        </article>
+        <article id="bureaudir">
+            <div>
+                <h2>Le bureau du directeur</h2>
+                <p>Vous avez très peu de temps, mais vous voilà à l'étape la plus importante de la mission.
+                    Le 'Classified doc' se trouve quelque part autour vous. Attention, il est très bien protégé par
+                    les ennemis. Dès que vous l'avez trouvé, ne perdez pas de temps et trouvez un moyen de vous échapper
+                    !
+                    Le bureau du directeur est le meilleur endroit pour s'exfiltrer sans être vu...</p>
+            </div>
+            <img src="./img/bureau1.jpg" alt="Bureau du directeur" class="droite">
+        </article>
+        <article id="map">
+            <h2>Retrouvez nous !</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.6165494890633!2d3.8480946756986745!3d43.635339253586544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6aec3fc4072d7%3A0x1a1585a408bcfed4!2sIUT%20Montpellier!5e0!3m2!1sfr!2sfr!4v1697636961111!5m2!1sfr!2sfr"></iframe>
+        </article>
+    </div>
+</main>
+<footer id="footer">
+    <img src="./img/top-secret.png" alt="Logo Topsecret" id="topsecret-logo">
+    <div id="liens-footer">
+        <p><a href="#">Mentions légales</a></p>
+        <p><a href="#">Politique de confidentialité</a></p>
+        <p><a href="#">Conditions générales de vente et d'utilisation</a></p>
+    </div>
+</footer>
 </body>
 </html>
