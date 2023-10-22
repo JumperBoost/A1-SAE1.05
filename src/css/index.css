@@ -171,6 +171,8 @@ body > main {
     margin: 30px 25px 20px 40px;
 }
 
+
+
 #articles > article > p {
     text-align: justify;
     font-family: Baskerville Old Face, serif;
@@ -192,7 +194,6 @@ body > main {
 
 #map {
     background-color: #562102;
-    color:white;
 }
 
 #map > iframe {
@@ -211,7 +212,7 @@ footer > #topsecret-logo {
     width:100px;
 }
 
-footer > #liens-footer {
+footer > #lien-footer {
     margin-left:auto;
     margin-right: 1%;
     text-align: right;
